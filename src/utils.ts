@@ -15,6 +15,7 @@ export function createElementForFileType(fileType: FileType, filePath: string) {
     case "opus":
     case "m4a":
       element = document.createElement("audio");
+      element.setAttribute("controls", '');
       break;
 
     // Video Formats
@@ -27,6 +28,7 @@ export function createElementForFileType(fileType: FileType, filePath: string) {
     case "mov":
     case "m4v":
       element = document.createElement("video");
+      element.setAttribute("controls", '');
       break;
 
     // Image Formats
@@ -85,18 +87,17 @@ export function createElementForFileType(fileType: FileType, filePath: string) {
   return element;
 }
 
-
 export const imgExt = [
-  '.jpe',
-  '.jpg',
-  '.jpeg',
-  '.gif',
-  '.png',
-  '.bmp',
-  '.ico',
-  '.svg',
-  '.webp',
+  ".jpe",
+  ".jpg",
+  ".jpeg",
+  ".gif",
+  ".png",
+  ".bmp",
+  ".ico",
+  ".svg",
+  ".webp",
 ];
 
-export const isImgType = (ext) =>
+export const isImgType = (ext: string) =>
   ext && imgExt.some((i) => i.includes(ext.toLowerCase()));

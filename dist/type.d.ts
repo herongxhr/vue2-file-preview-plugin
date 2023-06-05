@@ -3,6 +3,7 @@ export type PluginOptions = undefined | {
     dialogClassName?: string;
     titleStyle?: string;
     closeButtonStyle?: string;
+    globalSettings?: any;
 };
 export interface FileData {
     id: number;

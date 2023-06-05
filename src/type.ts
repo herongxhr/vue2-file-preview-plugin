@@ -40,6 +40,7 @@ export type PluginOptions =
       dialogClassName?: string;
       titleStyle?: string;
       closeButtonStyle?: string;
+      globalSettings?: any;
     };
 
 export interface FileData {
@@ -51,18 +52,3 @@ export interface FileData {
   dataFlag?: number;
   delFlag?: number;
 }
-
-export const imgExt = [
-  ".jpe",
-  ".jpg",
-  ".jpeg",
-  ".gif",
-  ".png",
-  ".bmp",
-  ".ico",
-  ".svg",
-  ".webp",
-];
-
-export const isImgType = (ext: string) =>
-  ext && imgExt.some((i) => i.includes(ext.toLowerCase()));
